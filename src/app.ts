@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import cors from "@fastify/cors";
 import { sequelize, checkDatabaseConnection } from "./plugins/sequelize";
 import candidateRoutes from "./routes/candidate.routes";
+import jobRoutes from "./routes/job.routes";
 
 dotenv.config();
 
@@ -11,6 +12,7 @@ const app = fastify({
   logger: pino({ level: "info" }),
 });
 app.register(candidateRoutes);
+app.register(jobRoutes);
 dotenv.config();
 app.register(cors, {
   origin: "*",

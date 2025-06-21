@@ -134,6 +134,7 @@ CandidateModel.init(
   {
     sequelize,
     tableName: "candidates",
+    modelName: "CandidateModel", // Explicitly set modelName
   }
 );
 

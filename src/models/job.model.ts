@@ -68,7 +68,7 @@ Job.init(
             allowNull: true,
         },
         skills_required: {
-            type: DataTypes.ARRAY(DataTypes.STRING), 
+            type: DataTypes.JSON, // Changed from ARRAY(DataTypes.STRING) to JSON
             allowNull: true,
         },
         // profile_match_percentage: {

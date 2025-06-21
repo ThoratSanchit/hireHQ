@@ -82,9 +82,10 @@ export const updateCandidate = async (
         status_code: 404,
         message: "Candidate not found.",
       });
+      return; // Added return to stop execution
     }
 
-    const updateCandidate = await findData?.update(updateData);
+    const updateCandidate = await findData.update(updateData); // Removed optional chaining as findData is guaranteed here
     reply.status(201).send({
       status_code: 201,
       updateCandidate,

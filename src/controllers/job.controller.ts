@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { jobInterface } from "../interface/job.interface";
-import { JobModel } from "../models/job.model";
+import JobModel from "../models/job.model"; // Corrected import for default export
 
 export const createJob = async (
   request: FastifyRequest,
